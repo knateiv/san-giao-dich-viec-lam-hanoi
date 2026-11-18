@@ -1,0 +1,34 @@
+# Node.js / Next.js
+Frontend/node_modules/
+Frontend/.next/
+Frontend/out/
+*.tsbuildinfo
+
+# Java / Spring Boot / Maven
+Backend/target/
+*.log
+
+# Runtime Uploads (preserve empty directory structure only)
+Backend/uploads/*
+!Backend/uploads/avatars/
+!Backend/uploads/cv/
+!Backend/uploads/gp/
+Backend/uploads/avatars/*
+!Backend/uploads/avatars/.gitkeep
+Backend/uploads/cv/*
+!Backend/uploads/cv/.gitkeep
+Backend/uploads/gp/*
+!Backend/uploads/gp/.gitkeep
+
+# IDE & OS
+.vs/
+.idea/
+.agents/
+figma_exports/
+Thumbs.db
+.DS_Store
+
+# Environment Variables
+.env
+.env.*
+!.env.example

@@ -1,0 +1,35 @@
+﻿{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "1. Chạy SQL Server LocalDB Bridge (Port 14333)",
+      "type": "shell",
+      "command": "node Scripts/sqlserver_localdb_bridge.mjs",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "2. Chạy Backend Spring Boot (Port 8080)",
+      "type": "shell",
+      "command": "cd Backend; mvn spring-boot:run",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "3. Chạy Frontend Next.js (Port 3000)",
+      "type": "shell",
+      "command": "cd Frontend; npm.cmd run dev",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Frontend Production",
+      "type": "shell",
+      "command": "cd Frontend; npm.cmd run build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

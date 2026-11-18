@@ -1,0 +1,158 @@
+/* Hallmark · pre-emit critique: P4 H5 E4 S5 R4 V4 · weakest: R, dense administrative forms across 6 subsystems; stripped nested containers and decorative chrome to 1px #DCE2E9 hairlines */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-canvas: #F6F8FB;
+  --bg-surface: #FFFFFF;
+  --bg-tint: #ECF3FC;
+  --civic-blue: #215DA8;
+  --civic-blue-hover: #1A4C8B;
+  --ink-primary: #192536;
+  --ink-secondary: #5F6C7B;
+  --border-subtle: #DCE2E9;
+  --status-success: #15803D;
+  --status-warning: #B45309;
+  --status-danger: #B91C1C;
+}
+
+html,
+body {
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Focus ring chuẩn WCAG 2.1 AA, không dùng transition: all */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--civic-blue);
+  outline-offset: 2px;
+}
+
+/* Style chuẩn hóa cho control FIT HOU (dgv_, tb_, cbb_, btn_) */
+.civic-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+}
+
+.civic-input {
+  width: 100%;
+  min-height: 40px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  color: var(--ink-primary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.civic-input:hover:not(:disabled) {
+  border-color: #B6C2CF;
+}
+
+.civic-input:disabled {
+  background-color: #F1F5F9;
+  color: var(--ink-secondary);
+  cursor: not-allowed;
+}
+
+.civic-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 40px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: var(--civic-blue);
+  border: 1px solid var(--civic-blue);
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.civic-btn-primary:hover:not(:disabled) {
+  background-color: var(--civic-blue-hover);
+  border-color: var(--civic-blue-hover);
+}
+
+.civic-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.civic-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 40px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.civic-btn-secondary:hover:not(:disabled) {
+  background-color: #F1F5F9;
+  border-color: #B6C2CF;
+}
+
+.civic-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.civic-table thead th {
+  padding: 0.75rem 0.875rem;
+  text-align: left;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  background-color: #F8FAFC;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.civic-table tbody td {
+  padding: 0.75rem 0.875rem;
+  color: var(--ink-primary);
+  border-bottom: 1px solid #EDF2F7;
+  vertical-align: top;
+}
+
+.civic-table tbody tr:hover {
+  background-color: #F9FBFE;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

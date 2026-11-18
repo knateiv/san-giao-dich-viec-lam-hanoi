@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "typescript.tsdk": "Frontend/node_modules/typescript/lib",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "files.exclude": {
+    "**/.next": true,
+    "**/target": true
+  }
+}
